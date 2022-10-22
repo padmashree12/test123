@@ -3,6 +3,7 @@ name: Tweet
 on:
   schedule:
     - cron: '0 * * * *'
+  push:
 
 jobs:
   php-cs-fixer:

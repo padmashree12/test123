@@ -1,0 +1,28 @@
+name: Tweet
+
+on:
+  schedule:
+    - cron: '* */5 * * *'
+
+jobs:
+  php-cs-fixer:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+
+
+
+    - name: Make the tweet
+      run: bash test.sh
+      
+
+
+    
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: LETS GO!!!!!!!!!!!!!!!!!!
+        commit_user_name: HackerMan12345435
+        commit_user_email: pwksatvuzrrvokmeeo@tmmwj.com
